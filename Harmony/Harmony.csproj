@@ -57,14 +57,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MonoMod.RuntimeDetour" Version="$(MonoModRuntimeDetour)" />
-    </ItemGroup>
-
-    <ItemGroup>
         <!-- Reference assemblies are needed for non-Windows .NET Framework targeting builds. -->
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
 
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup Condition="$(TargetFramework)=='net35'">
+      <PackageReference Include="Mono.Cecil" Version="0.10.4" />
+    </ItemGroup>
+
+    <ItemGroup Condition="$(TargetFramework)=='net452'">
+      <PackageReference Include="Mono.Cecil" Version="0.11.5" />
+      <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework)=='netstandard2.0'">
@@ -73,6 +78,73 @@
 
         <!-- Minimal suitable major version -->
         <PackageReference Include="System.Text.Json" Version="5.0.2" />
+        <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
+        <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.7.0" />
+        <PackageReference Include="Mono.Cecil" Version="0.11.5" />
+    </ItemGroup>
+    
+
+    <ItemGroup Condition="$(TargetFramework)=='net35'">
+      <Reference Include="MonoMod.Backports">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net35\MonoMod.Backports.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Core">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net35\MonoMod.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Iced">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net35\MonoMod.Iced.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.ILHelpers">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net35\MonoMod.ILHelpers.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.RuntimeDetour">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net35\MonoMod.RuntimeDetour.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Utils">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net35\MonoMod.Utils.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup Condition="$(TargetFramework)=='net452'">
+      <Reference Include="MonoMod.Backports">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net452\MonoMod.Backports.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Core">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net452\MonoMod.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Iced">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net452\MonoMod.Iced.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.ILHelpers">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net452\MonoMod.ILHelpers.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.RuntimeDetour">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net452\MonoMod.RuntimeDetour.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Utils">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net452\MonoMod.Utils.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup Condition="$(TargetFramework)=='netstandard2.0'">
+      <Reference Include="MonoMod.Backports">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_netstandard2.0\MonoMod.Backports.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Core">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_netstandard2.0\MonoMod.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Iced">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_netstandard2.0\MonoMod.Iced.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.ILHelpers">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_netstandard2.0\MonoMod.ILHelpers.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.RuntimeDetour">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_netstandard2.0\MonoMod.RuntimeDetour.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Utils">
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_netstandard2.0\MonoMod.Utils.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
     <Target Name="RemoveOldNuGetPackages" BeforeTargets="PreBuildEvent">
