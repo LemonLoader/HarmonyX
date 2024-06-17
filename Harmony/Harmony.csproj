@@ -91,9 +91,6 @@
       <Reference Include="MonoMod.Core">
         <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\debug_net35\MonoMod.Core.dll</HintPath>
       </Reference>
-      <Reference Include="MonoMod.Iced">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Iced\debug_net35\MonoMod.Iced.dll</HintPath>
-      </Reference>
       <Reference Include="MonoMod.ILHelpers">
         <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\debug_net35\MonoMod.ILHelpers.dll</HintPath>
       </Reference>
@@ -112,9 +109,6 @@
       <Reference Include="MonoMod.Core">
         <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\debug_net452\MonoMod.Core.dll</HintPath>
       </Reference>
-      <Reference Include="MonoMod.Iced">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Iced\debug_net452\MonoMod.Iced.dll</HintPath>
-      </Reference>
       <Reference Include="MonoMod.ILHelpers">
         <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\debug_net452\MonoMod.ILHelpers.dll</HintPath>
       </Reference>
@@ -132,9 +126,6 @@
       </Reference>
       <Reference Include="MonoMod.Core">
         <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\debug_netstandard2.0\MonoMod.Core.dll</HintPath>
-      </Reference>
-      <Reference Include="MonoMod.Iced">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Iced\debug_netstandard2.0\MonoMod.Iced.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.ILHelpers">
         <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\debug_netstandard2.0\MonoMod.ILHelpers.dll</HintPath>
