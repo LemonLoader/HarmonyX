@@ -86,55 +86,55 @@
 
     <ItemGroup Condition="$(TargetFramework)=='net35'">
       <Reference Include="MonoMod.Backports">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Backports\debug_net35\MonoMod.Backports.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Backports\$(Configuration.ToLower())_net35\MonoMod.Backports.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.Core">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\debug_net35\MonoMod.Core.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\$(Configuration.ToLower())_net35\MonoMod.Core.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.ILHelpers">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\debug_net35\MonoMod.ILHelpers.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\$(Configuration.ToLower())_net35\MonoMod.ILHelpers.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.RuntimeDetour">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net35\MonoMod.RuntimeDetour.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\$(Configuration.ToLower())_net35\MonoMod.RuntimeDetour.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.Utils">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Utils\debug_net35\MonoMod.Utils.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Utils\$(Configuration.ToLower())_net35\MonoMod.Utils.dll</HintPath>
       </Reference>
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework)=='net452'">
       <Reference Include="MonoMod.Backports">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Backports\debug_net452\MonoMod.Backports.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Backports\$(Configuration.ToLower())_net452\MonoMod.Backports.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.Core">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\debug_net452\MonoMod.Core.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\$(Configuration.ToLower())_net452\MonoMod.Core.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.ILHelpers">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\debug_net452\MonoMod.ILHelpers.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\$(Configuration.ToLower())_net452\MonoMod.ILHelpers.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.RuntimeDetour">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_net452\MonoMod.RuntimeDetour.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\$(Configuration.ToLower())_net452\MonoMod.RuntimeDetour.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.Utils">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Utils\debug_net452\MonoMod.Utils.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Utils\$(Configuration.ToLower())_net452\MonoMod.Utils.dll</HintPath>
       </Reference>
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework)=='netstandard2.0'">
       <Reference Include="MonoMod.Backports">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Backports\debug_netstandard2.0\MonoMod.Backports.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Backports\$(Configuration.ToLower())_netstandard2.0\MonoMod.Backports.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.Core">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\debug_netstandard2.0\MonoMod.Core.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Core\$(Configuration.ToLower())_netstandard2.0\MonoMod.Core.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.ILHelpers">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\debug_netstandard2.0\MonoMod.ILHelpers.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.ILHelpers\$(Configuration.ToLower())_netstandard2.0\MonoMod.ILHelpers.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.RuntimeDetour">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\debug_netstandard2.0\MonoMod.RuntimeDetour.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.RuntimeDetour\$(Configuration.ToLower())_netstandard2.0\MonoMod.RuntimeDetour.dll</HintPath>
       </Reference>
       <Reference Include="MonoMod.Utils">
-        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Utils\debug_netstandard2.0\MonoMod.Utils.dll</HintPath>
+        <HintPath>..\..\MonoMod\artifacts\bin\MonoMod.Utils\$(Configuration.ToLower())_netstandard2.0\MonoMod.Utils.dll</HintPath>
       </Reference>
     </ItemGroup>
 
